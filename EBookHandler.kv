@@ -1,0 +1,65 @@
+#:kivy 2.0.0
+#:import utils kivy.utils
+
+<EbookHandler>:
+    canvas:
+        Color:
+            rgb: utils.get_color_from_hex('#595959')
+        Rectangle:
+            pos: 0, root.height * 1/4
+            size: self.width, 5
+        Rectangle:
+            pos: 0, root.height * 3/4
+            size: self.width, 5
+    Label:
+        id: title
+        font_size: 50
+        center_x: root.width / 2
+        top: root.top - 50
+        text: "Ebooks"
+        color: utils.get_color_from_hex('#A6874E')
+    Label:
+        id: connected
+        font_size: 30
+        center_x: root.width / 2
+        top: root.top - 100
+        text: "Kindle detected: "
+        color: utils.get_color_from_hex('#A6874E')
+    Button:
+        id: to_kindle
+        font_size: 30
+        center_x: root.width / 2
+        width: 300
+        height: 75
+        top: root.top - 300
+        text: "Transfer To Kindle"
+    Button:
+        id: sort
+        font_size: 30
+        center_x: root.width / 2
+        width: 300
+        height: 75
+        top: root.top - 400
+        text: "Move To Shelf"
+    #Button:
+        #id: list
+        #font_size: 30
+        #center_x: root.width / 2
+        #width: 300
+        #height: 75
+        #top: root.top - 500
+        #text: "List Bookshelf"
+    Label:
+        id: bookshelf_count
+        font_size: 40
+        center_x: root.width / 2
+        top: root.height * 1/4
+        text: ""
+        color: utils.get_color_from_hex('#A6874E')
+    Label:
+        id: stored_count
+        font_size: 40
+        center_x: root.width / 2
+        top: root.height * 1/4 - 60
+        text: ""
+        color: utils.get_color_from_hex('#A6874E')
